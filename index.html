@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0715">
+    <meta name="description" content="A special birthday universe made for Riha Fatima">
+    <title>RIHA FATIMA | Birthday Universe</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- 01. GLOBAL BACKGROUND -->
+    <!-- ============================= -->
+
+    <div id="background-universe">
+        <div class="stars-layer" id="stars-layer"></div>
+        <div class="particles-layer" id="particles-layer"></div>
+        <div class="ambient-glow glow-one"></div>
+        <div class="ambient-glow glow-two"></div>
+        <div class="ambient-glow glow-three"></div>
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- 02. LOADING SCREEN -->
+    <!-- ============================= -->
+
+    <section id="loading-screen" class="screen active">
+
+        <div class="loading-content">
+
+            <div class="loading-symbol">
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <h1 class="loading-title">
+                Preparing a little universe
+            </h1>
+
+            <p class="loading-subtitle">
+                Something special is waiting...
+            </p>
+
+            <div class="loading-bar-container">
+                <div id="loading-progress"></div>
+            </div>
+
+            <span id="loading-percentage">0%</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- 03. SECRET ENTRY SCREEN -->
+    <!-- ============================= -->
+
+    <section id="entry-screen" class="screen">
+
+        <div class="entry-card">
+
+            <div class="entry-decoration">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <p class="entry-eyebrow">
+                A universe made especially for
+            </p>
+
+            <h1 class="entry-name">
+                Riha Fatima
+            </h1>
+
+            <p class="entry-description">
+                Some beautiful things are hidden behind
+                a little secret...
+            </p>
+
+            <div class="password-wrapper">
+
+                <label for="secret-password">
+                    Enter the secret password
+                </label>
+
+                <div class="password-input-container">
+
+                    <input
+                        type="password"
+                        id="secret-password"
+                        placeholder="Your secret key"
+                        autocomplete="off"
+                    >
+
+                    <button
+                        id="toggle-password"
+                        type="button"
+                        aria-label="Toggle password visibility"
+                    >
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <button
+                id="unlock-button"
+                class="primary-button"
+                type="button"
+            >
+                <span>Unlock the Universe</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <p id="entry-error" class="error-message">
+                That wasn't the right key. Try again.
+            </p>
+
+            <div class="entry-footer">
+                <span>Made with a special thought</span>
+                <i class="fa-solid fa-sparkles"></i>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- 04. MUSIC PLAYER -->
+    <!-- ============================= -->
+
+    <audio
+        id="background-music"
+        loop
+        preload="none"
+    >
+        <!-- Add your music file later -->
+    </audio>
+
+    <audio
+        id="sound-effects"
+        preload="none"
+    >
+        <!-- Sound effects will be added later -->
+    </audio>
+
+    <div id="music-widget" class="music-widget">
+
+        <button
+            id="music-toggle"
+            class="music-button"
+            type="button"
+            aria-label="Play or pause music"
+        >
+            <i class="fa-solid fa-play"></i>
+        </button>
+
+        <div class="music-info">
+            <span class="music-label">OUR LITTLE SOUNDTRACK</span>
+            <span id="music-status">Music is paused</span>
+        </div>
+
+        <button
+            id="music-volume"
+            type="button"
+            aria-label="Toggle sound"
+        >
+            <i class="fa-solid fa-volume-high"></i>
+        </button>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- 05. MAIN WEBSITE -->
+    <!-- ============================= -->
+
+    <main id="main-universe" class="hidden">
+
+
+        <!-- ============================= -->
+        <!-- 05A. NAVIGATION -->
+        <!-- ============================= -->
+
+        <nav id="main-navigation">
+
+            <div class="nav-brand">
+                <span class="brand-symbol">✦</span>
+                <span>RIHA FATIMA</span>
+            </div>
+
+            <button
+                id="menu-toggle"
+                type="button"
+                aria-label="Open menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div id="nav-links">
+
+                <a href="#home-section">Home</a>
+                <a href="#letter-section">Letter</a>
+                <a href="#memories-section">Memories</a>
+                <a href="#gallery-section">Gallery</a>
+                <a href="#gift-section">Gifts</a>
+                <a href="#cake-section">Cake</a>
+                <a href="#final-section">Final Surprise</a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ============================= -->
+        <!-- 06. HERO / HOME SECTION -->
+        <!-- ============================= -->
+
+        <section id="home-section" class="page-section hero-section">
+
+            <div class="hero-stars">
+                <span class="hero-star star-a">✦</span>
+                <span class="hero-star star-b">✧</span>
+                <span class="hero-star star-c">✦</span>
+                <span class="hero-star star-d">✧</span>
+            </div>
+
+            <div class="hero-content">
+
+                <span class="hero-small-title">
+                    A CELEBRATION OF SOMEONE SPECIAL
+                </span>
+
+                <h1 id="hero-heading">
+                    Happy Birthday
+                </h1>
+
+                <h2 class="hero-person-name">
+                    Riha Fatima
+                </h2>
+
+                <div class="hero-divider">
+                    <span></span>
+                    <i class="fa-solid fa-star"></i>
+                    <span></span>
+                </div>
+
+                <p id="hero-message">
+                    Today is a little more beautiful
+                    because it belongs to you
+                </p>
+
+                <button
+                    id="explore-button"
+                    class="primary-button"
+                    type="button"
+                >
+                    Explore Your Universe
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+            </div>
+
+            <div class="scroll-indicator">
+                <span>SCROLL TO DISCOVER</span>
+                <i class="fa-solid fa-arrow-down"></i>
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- 07. BIRTHDAY COUNTDOWN -->
+        <!-- ============================= -->
+
+        <section
+            id="countdown-section"
+            class="page-section countdown-section"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-kicker">
+                    A SPECIAL MOMENT
+                </span>
+
+                <h2>Time Until Your Day</h2>
+
+                <p>
+                    Every second leads to another beautiful moment
+                </p>
+
+            </div>
+
+            <div id="countdown-container">
+
+                <div class="countdown-box">
+                    <span id="countdown-days">00</span>
+                    <label>Days</label>
+                </div>
+
+                <div class="countdown-box">
+                    <span id="countdown-hours">00</span>
+                    <label>Hours</label>
+                </div>
+
+                <div class="countdown-box">
+                    <span id="countdown-minutes">00</span>
+                    <label>Minutes</label>
+                </div>
+
+                <div class="countdown-box">
+                    <span id="countdown-seconds">00</span>
+                    <label>Seconds</label>
+                </div>
+
+            </div>
+
+            <p id="countdown-message"></p>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- 08. BIRTHDAY LETTER -->
+        <!-- ============================= -->
+
+        <section
+            id="letter-section"
+            class="page-section letter-section"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-kicker">
+                    WORDS FROM THE HEART
+                </span>
+
+                <h2>A Letter For You</h2>
+
+                <p>
+                    A few words saved for your special day
+                </p>
+
+            </div>
+
+            <div class="letter-envelope" id="letter-envelope">
+
+                <div class="envelope-visual">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Open your letter</span>
+                </div>
+
+                <button
+                    id="open-letter-button"
+                    class="primary-button"
+                    type="button"
+                >
+                    Open Letter
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+
+            </div>
+
+            <div
+                id="letter-content"
+                class="letter-content hidden"
+            >
+
+                <div class="letter-paper">
+
+                    <div class="letter-paper-decoration">
+                        ✦
+                    </div>
+
+                    <h3>Dear Riha Fatima</h3>
+
+                    <div
+                        id="letter-text"
+                        class="letter-text"
+                    >
+                        <!-- Letter text will be added later -->
+                    </div>
+
+                    <div class="letter-signature">
+                        With love and warm wishes
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- 09. MEMORY TIMELINE -->
+        <!-- ============================= -->
+
+        <section
+            id="memories-section"
+            class="page-section memories-section"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-kicker">
+                    LITTLE MOMENTS
+                </span>
+
+                <h2>A Timeline Of Memories</h2>
+
+                <p>
+                    Some moments deserve their own little place
+                </p>
+
+            </div>
+
+            <div id="memory-timeline">
+
+                <article class="memory-card">
+
+                    <div class="memory-marker">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div class="memory-content">
+
+                        <span class="memory-date">
+                            MEMORY 01
+                        </span>
+
+                        <h3>First Special Memory</h3>
+
+                        <p>
+                            <!-- Add memory text later -->
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="memory-card">
+
+                    <div class="memory-marker">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="memory-content">
+
+                        <span class="memory-date">
+                            MEMORY 02
+                        </span>
+
+                        <h3>A Beautiful Moment</h3>
+
+                        <p>
+                            <!-- Add memory text later -->
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="memory-card">
+
+                    <div class="memory-marker">
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+
+                    <div class="memory-content">
+
+                        <span class="memory-date">
+                            MEMORY 03
+                        </span>
+
+                        <h3>Another Little Story</h3>
+
+                        <p>
+                            <!-- Add memory text later -->
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- 10. PHOTO GALLERY -->
+        <!-- ============================= -->
+
+        <section
+            id="gallery-section"
+            class="page-section gallery-section"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-kicker">
+                    A COLLECTION OF MOMENTS
+                </span>
+
+                <h2>Our Memory Gallery</h2>
+
+                <p>
+                    Little snapshots saved in a special place
+                </p>
+
+            </div>
+
+            <div id="gallery-grid">
+
+                <button
+                    class="gallery-item"
+                    data-gallery-index="0"
+                    type="button"
+                >
+                    <img
+                        src="images/photo-1.jpg"
+                        alt="Memory photo one"
+                        loading="lazy"
+                    >
+                    <span class="gallery-caption">
+                        Memory One
+                    </span>
+                </button>
+
+                <button
+                    class="gallery-item"
+                    data-gallery-index="1"
+                    type="button"
+                >
+                    <img
+                        src="images/photo-2.jpg"
+                        alt="Memory photo two"
+                        loading="lazy"
+                    >
+                    <span class="gallery-caption">
+                        Memory Two
+                    </span>
+                </button>
+
+                <button
+                    class="gallery-item"
+                    data-gallery-index="2"
+                    type="button"
+                >
+                    <img
+                        src="images/photo-3.jpg"
+                        alt="Memory photo three"
+                        loading="lazy"
+                    >
+                    <span class="gallery-caption">
+                        Memory Three
+                    </span>
+                </button>
+
+                <button
+                    class="gallery-item"
+                    data-gallery-index="3"
+                    type="button"
+                >
+                    <img
+                        src="images/photo-4.jpg"
+                        alt="Memory photo four"
+                        loading="lazy"
+                    >
+                    <span class="gallery-caption">
+                        Memory Four
+                    </span>
+                </button>
+
+                <button
+                    class="gallery-item"
+                    data-gallery-index="4"
+                    type="button"
+                >
+                    <img
+                        src="images/photo-5.jpg"
+                        alt="Memory photo five"
+                        loading="lazy"
+                    >
+                    <span class="gallery-caption">
+                        Memory Five
+                    </span>
+                </button>
+
+                <button
+                    class="gallery-item"
+                    data-gallery-index="5"
+                    type="button"
+                >
+                    <img
+                        src="images/photo-6.jpg"
+                        alt="Memory photo six"
+                        loading="lazy"
+                    >
+                    <span class="gallery-caption">
+                        Memory Six
+                    </span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- 11. GALLERY LIGHTBOX -->
+        <!-- ============================= -->
+
+        <div id="gallery-lightbox" class="lightbox hidden">
+
+            <button
+                id="lightbox-close"
+                type="button"
+                aria-label="Close gallery"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <button
+                id="lightbox-prev"
+                type="button"
+                aria-label="Previous photo"
+            >
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="lightbox-content">
+
+                <img
+                    id="lightbox-image"
+                    src=""
+                    alt="Selected memory"
+                >
+
+                <p id="lightbox-caption"></p>
+
+            </div>
+
+            <button
+                id="lightbox-next"
+                type="button"
+                aria-label="Next photo"
+            >
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+
+        <!-- ============================= -->
+        <!-- 12. INTERACTIVE GIFTS -->
+        <!-- ============================= -->
+
+        <section
+            id="gift-section"
+            class="page-section gift-section"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-kicker">
+                    LITTLE SURPRISES
+                </span>
+
+                <h2>Three Little Gifts</h2>
+
+                <p>
+                    Each box has something waiting inside
+                </p>
+
+            </div>
+
+            <div id="gift-grid">
+
+                <button
+                    class="gift-box"
+                    data-gift="0"
+                    type="button"
+                >
+
+                    <div class="gift-icon">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+
+                    <span>Gift One</span>
+                    <small>Tap to reveal</small>
+
+                </button>
+
+                <button
+                    class="gift-box"
+                    data-gift="1"
+                    type="button"
+                >
+
+                    <div class="gift-icon">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+
+                    <span>Gift Two</span>
+                    <small>Tap to reveal</small>
+
+                </button>
+
+                <button
+                    class="gift-box"
+                    data-gift="2"
+                    type="button"
+                >
+
+                    <div class="gift-icon">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+
+                    <span>Gift Three</span>
+                    <small>Tap to reveal</small>
+
+                </button>
+
+            </div>
+
+            <div id="gift-reveal" class="gift-reveal hidden">
+
+                <button
+                    id="gift-reveal-close"
+                    type="button"
+                    aria-label="Close gift"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div id="gift-reveal-icon">
+                    <i class="fa-solid fa-sparkles"></i>
+                </div>
+
+                <h3 id="gift-reveal-title"></h3>
+
+                <p id="gift-reveal-message"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- 13. BIRTHDAY CAKE -->
+        <!-- ============================= -->
+
+        <section
+            id="cake-section"
+            class="page-section cake-section"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-kicker">
+                    A BIRTHDAY TRADITION
+                </span>
+
+                <h2>A Cake For Your Day</h2>
+
+                <p>
+                    A little celebration of another beautiful year
+                </p>
+
+            </div>
+
+            <div id="cake-interaction">
+
+                <div id="cake-visual">
+
+                    <!-- Cake illustration will be added with CSS -->
+
+                    <div class="cake-candles">
+
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="cake-layer cake-top"></div>
+                    <div class="cake-layer cake-middle"></div>
+                    <div class="cake-layer cake-bottom"></div>
+
+                </div>
+
+                <button
+                    id="blow-candles-button"
+                    class="primary-button"
+                    type="button"
+                >
+                    <i class="fa-solid fa-wind"></i>
+                    Blow Out The Candles
+                </button>
+
+                <p id="cake-message"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- 14. WISH SECTION -->
+        <!-- ============================= -->
+
+        <section
+            id="wish-section"
+            class="page-section wish-section"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-kicker">
+                    MAKE A WISH
+                </span>
+
+                <h2>A Wish For Your Future</h2>
+
+                <p>
+                    A little moment to imagine beautiful things
+                </p>
+
+            </div>
+
+            <button
+                id="wish-reveal-button"
+                class="primary-button"
+                type="button"
+            >
+                Reveal Your Birthday Wish
+                <i class="fa-solid fa-star"></i>
+            </button>
+
+            <div id="wish-reveal" class="wish-reveal hidden">
+
+                <div class="wish-symbol">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+                <p id="wish-text"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- 15. SURPRISE ENVELOPE -->
+        <!-- ============================= -->
+
+        <section
+            id="envelope-section"
+            class="page-section envelope-section"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-kicker">
+                    ONE MORE LITTLE THING
+                </span>
+
+                <h2>A Hidden Message</h2>
+
+                <p>
+                    There's something else waiting
+                </p>
+
+            </div>
+
+            <button
+                id="surprise-envelope-button"
+                class="surprise-envelope"
+                type="button"
+            >
+
+                <span class="envelope-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </span>
+
+                <span>Open the envelope</span>
+
+            </button>
+
+            <div
+                id="envelope-message"
+                class="envelope-message hidden"
+            >
+
+                <h3>A Special Message</h3>
+
+                <p id="envelope-message-text"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- 16. FINAL SURPRISE -->
+        <!-- ============================= -->
+
+        <section
+            id="final-section"
+            class="page-section final-section"
+        >
+
+            <div class="final-stars">
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+            </div>
+
+            <div class="final-content">
+
+                <span class="section-kicker">
+                    THE LAST PAGE
+                </span>
+
+                <h2 id="final-heading">
+                    Happy Birthday
+                </h2>
+
+                <h3>
+                    Riha Fatima
+                </h3>
+
+                <div class="final-divider">
+                    ✧ ───────── ✧
+                </div>
+
+                <p id="final-message">
+                    <!-- Final message will be added later -->
+                </p>
+
+                <button
+                    id="final-celebration-button"
+                    class="primary-button"
+                    type="button"
+                >
+                    <i class="fa-solid fa-sparkles"></i>
+                    Celebrate Again
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- 17. FOOTER -->
+        <!-- ============================= -->
+
+        <footer id="website-footer">
+
+            <div class="footer-symbol">
+                ✦
+            </div>
+
+            <p>
+                A little universe created for a special day
+            </p>
+
+            <span id="footer-year"></span>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- 18. GLOBAL EFFECTS -->
+    <!-- ============================= -->
+
+    <div id="confetti-container"></div>
+    <div id="toast-container"></div>
+
+    <button
+        id="back-to-top"
+        type="button"
+        aria-label="Back to top"
+    >
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <!-- ============================= -->
+    <!-- 19. JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
